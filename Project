@@ -1,3 +1,18 @@
-Hello
-
-boom
+#Colleges will be on a scale from 0-100 Ex. Duke=80-90
+#Each input from user will equal a certian number of points 
+  #Enter users name
+  #Math Problem
+  #History Problem
+  #English Problem
+  #Current Gpa
+  #Sat Score
+  #Act Score
+  #Exculicular activites
+  #Fianical Stanfings
+#After all the questions have been answered compute the total amount of points
+#Display Users name
+#Display total score 
+#Display range of colleges that match the score
+#Display "Would you like to do another survey" 
+#If answered yes system will loop back to the beginning
+#If answered no the system will terminate 
