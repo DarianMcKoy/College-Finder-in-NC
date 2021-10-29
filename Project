@@ -16,3 +16,36 @@
 #Display "Would you like to do another survey" 
 #If answered yes system will loop back to the beginning
 #If answered no the system will terminate 
+#THIS BELOW IS WHAT I HAVE SO FAR
+print ("Hello and welcome to the College Finder Survey.")
+print ("This is a survey and test meant to find the colleges and universitiies")
+print ("that may be the best fit for you all throughout NC,")
+name1 = print(input("What is your name? "))
+
+totalpoints = 0
+gpa_1 = float(input("What is your unweighted highschool GPA? (Must be a number equal to or less than 4)"))
+
+if gpa_1 >= 3.75:
+        totalpoints += 10
+elif (gpa_1 >= 3.4) and (gpa_1 < 3.75):
+    totalpoints += 7
+elif (gpa_1 >= 3) and (gpa_1 < 3.4):
+    totalpoints += 5
+elif (gpa_1 >= 2.5) and (gpa_1 <3):
+    totalpoints += 3
+else:
+    totalpoints+= 0
+
+gpa_2 = float(input("What is your weighted highschool GPA wIth AP Courses +1 and Honors Courses +.5? (Must be equal to or greater than your unweighted GPA"))
+if gpa_2 - gpa_1 >= .7:
+              totalpoints += 5
+elif (gpa_2 - gpa_1 >= .5) and (gpa_2 - gpa_1 < .7):
+              totalpoints += 4
+elif (gpa_2 - gpa_1 >= .3) and (gpa_2 - gpa_1 < .5):
+              totalpoints += 3
+elif (gpa_2 - gpa_1 >= .1) and (gpa_2 - gpa_1 < .3):
+              totalpoints += 2
+elif (gpa_2 - gpa_1 > 0) and (gpa_2 - gpa_1 < .1):
+              totalpoints += 1
+else :
+    totalpoints += 0
