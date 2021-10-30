@@ -49,3 +49,15 @@ elif (gpa_2 - gpa_1 > 0) and (gpa_2 - gpa_1 < .1):
               totalpoints += 1
 else :
     totalpoints += 0
+#This section uses a famlies salary to add points to the system
+financeProblem1 = float(input("What is your families yearly salary?:"))                     
+if financeProblem1>=40000:
+    totalpoints +=5
+elif financeProblem1<40000 and mathProblem1>30000:
+    totalpoints +=4
+elif financeProblem1<30000 and mathProblem1>20000:
+    totalpoints +=3
+elif financaProblem1<20000 and mathProblem1>10000:
+    totalpoints +=2
+elif financeProblem1<10000:
+    totalpoints +=1
