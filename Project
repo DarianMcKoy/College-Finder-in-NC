@@ -8,7 +8,7 @@
   #Sat Score
   #Act Score
   #Exculicular activites
-  #Fianical Stanfings
+  #Fianical Standings
 #After all the questions have been answered compute the total amount of points
 #Display Users name
 #Display total score 
@@ -113,6 +113,40 @@ if extras > 5 :
             totalpoints += 5
 else:
         totalpoints += extras
+
+mathproblem = int(input("If 3(2x-3) = 33, what does x equal? (Must be an integer)"))
+if mathproblem == 7:
+        totalpoints += 5
+else:
+        totalpoints += 0
+
+print(" (1) Her voice is clear.")
+print(" (2) Her voice was a clear bell.")
+print(" (3) Her voice was strong and sure.")
+print(" (4) Her voice rang clear like a bell.")
+readingproblem = input("Which of the following is a simile? (Answer with 1, 2, 3, or 4)")
+
+if readingproblem == 4:
+        totalpoints += 5
+else:
+        totalpoints += 0
+        
+mathproblem = int(input("If 3(2x-3) = 33, what does x equal? (Must be an integer)"))
+if mathproblem == 7:
+        totalpoints += 5
+else:
+        totalpoints += 0
+
+print(" (1) Her voice is clear.")
+print(" (2) Her voice was a clear bell.")
+print(" (3) Her voice was strong and sure.")
+print(" (4) Her voice rang clear like a bell.")
+readingproblem = input("Which of the following is a simile? (Answer with 1, 2, 3, or 4)")
+
+if readingproblem == 4:
+        totalpoints += 5
+else:
+        totalpoints += 0
         
 #This section uses a famlies salary to add points to the system
 financeProblem1 = float(input("What is your families yearly salary?:"))                     
