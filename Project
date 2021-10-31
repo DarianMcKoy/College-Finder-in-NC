@@ -49,6 +49,71 @@ elif (gpa_2 - gpa_1 > 0) and (gpa_2 - gpa_1 < .1):
               totalpoints += 1
 else :
     totalpoints += 0
+    
+  satscore1 = int(input("What is your score on the math section of the SAT? (Must be a number between 200 and 800) "))
+if (satscore1 >= 750) and (satscore1 <= 800):
+        totalpoints += 10
+elif (satscore1 >= 700) and (satscore1 < 750):
+        totalpoints += 8
+elif (satscore1 >= 650) and (satscore1 < 700):
+        totalpoints += 7
+elif (satscore1 >= 600) and (satscore1 < 650):
+        totalpoints += 6
+elif (satscore1 >= 550) and (satscore1 < 600):
+        totalpoints += 5
+elif (satscore1 >= 500) and (satscore1 < 550):
+        totalpoints += 4
+elif (satscore1 >= 450) and (satscore1 < 500):
+        totalpoints += 3
+elif (satscore1 >= 400) and (satscore1 < 450):
+        totalpoints += 2
+elif (satscore1 >= 350) and (satscore1 < 400):
+        totalpoints += 1
+else :
+        totalpoints += 0
+
+satscore2 = int(input("What is your score on the reading section of the SAT? (Must be a number between 200 and 800) "))
+if (satscore2 >= 750) and (satscore2 <= 800):
+        totalpoints += 10
+elif (satscore2 >= 700) and (satscore2 < 750):
+        totalpoints += 8
+elif (satscore2 >= 650) and (satscore2 < 700):
+        totalpoints += 7
+elif (satscore2 >= 600) and (satscore2 < 650):
+        totalpoints += 6
+elif (satscore2 >= 550) and (satscore2 < 600):
+        totalpoints += 5
+elif (satscore2 >= 500) and (satscore2 < 550):
+        totalpoints += 4
+elif (satscore2 >= 450) and (satscore2 < 500):
+        totalpoints += 3
+elif (satscore2 >= 400) and (satscore2 < 450):
+        totalpoints += 2
+elif (satscore2 >= 350) and (satscore2 < 400):
+        totalpoints += 1
+else :
+        totalpoints += 0
+
+actscore = int(input("What is your ACT score? (Must be an number between 1 and 36) "))
+if (actscore >= 33) and (actscore <= 36):
+        totalpoints += 10
+elif (actscore >= 28) and (actscore < 33):
+        totalpoints += 8
+elif (actscore >= 24) and (actscore < 28):
+        totalpoints += 6
+elif (actscore >= 21) and (actscore < 24):
+        totalpoints += 4
+elif (actscore >= 16) and (actscore < 21):
+        totalpoints += 2
+else :
+        totalpoints += 0
+   
+   extras = int(input("How many extracurriculars have you been involved in your entire high school career? These may include sports, clubs, student government, or any other activities you have been involved in throughout highschool(Must be a number) "))
+if extras > 5 :
+            totalpoints += 5
+else:
+        totalpoints += extras
+        
 #This section uses a famlies salary to add points to the system
 financeProblem1 = float(input("What is your families yearly salary?:"))                     
 if financeProblem1>=40000:
