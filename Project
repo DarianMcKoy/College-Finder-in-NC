@@ -17,12 +17,16 @@
 #If answered yes system will loop back to the beginning
 #If answered no the system will terminate 
 #THIS BELOW IS WHAT I HAVE SO FAR
+
 print ("Hello and welcome to the College Finder Survey.")
 print ("This is a survey and test meant to find the colleges and universitiies")
 print ("that may be the best fit for you all throughout NC,")
 name1 = print(input("What is your name? "))
-
+#The first questions we are asking is the name of the participant.
 totalpoints = 0
+
+#Next we are aaking for the weighted and unweighted GPA of the participant as both of these numbers are important to the college admissions process.
+
 gpa_1 = float(input("What is your unweighted highschool GPA? (Must be a number equal to or less than 4)"))
 
 if gpa_1 >= 3.75:
@@ -50,7 +54,8 @@ elif (gpa_2 - gpa_1 > 0) and (gpa_2 - gpa_1 < .1):
 else :
     totalpoints += 0
     
-  satscore1 = int(input("What is your score on the math section of the SAT? (Must be a number between 200 and 800) "))
+#SAT and ACT scores are two testing scores that colleges take very seriously, these numebrs can make or break which schools a student can get into and are a big part of the admissions process.
+satscore1 = int(input("What is your score on the math section of the SAT? (Must be a number between 200 and 800) "))
 if (satscore1 >= 750) and (satscore1 <= 800):
         totalpoints += 10
 elif (satscore1 >= 700) and (satscore1 < 750):
@@ -108,11 +113,15 @@ elif (actscore >= 16) and (actscore < 21):
 else :
         totalpoints += 0
    
-   extras = int(input("How many extracurriculars have you been involved in your entire high school career? These may include sports, clubs, student government, or any other activities you have been involved in throughout highschool(Must be a number) "))
+#Extracurriculars are a great way to grab the attention of college admissions office and often are considered just as important as grades.
+
+extras = int(input("How many extracurriculars have you been involved in your entire high school career? These may include sports, clubs, student government, or any other activities you have been involved in throughout highschool(Must be a number) "))
 if extras > 5 :
             totalpoints += 5
 else:
         totalpoints += extras
+
+#We have placed a simple math and english problem in the survey to see the simple problem solving skills of the participant.
 
 mathproblem = int(input("If 3(2x-3) = 33, what does x equal? (Must be an integer)"))
 if mathproblem == 7:
@@ -149,6 +158,7 @@ else:
         totalpoints += 0
         
 #This section uses a famlies salary to add points to the system
+
 financeProblem1 = float(input("What is your families yearly salary?:"))                     
 if financeProblem1>=70000:
     totalpoints +=5
