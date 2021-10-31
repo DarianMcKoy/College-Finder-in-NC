@@ -18,9 +18,13 @@
 #If answered no the system will terminate 
 #THIS BELOW IS WHAT I HAVE SO FAR
 
-print ("Hello and welcome to the College Finder Survey.")
-print ("This is a survey and test meant to find the colleges and universitiies")
-print ("that may be the best fit for you all throughout NC,")
+def titleLines():
+    Hello = "Hello and welcome to the College Finder Survey."
+    survey = "This is a survey and test meant to find the colleges and universitiies"
+    nc = "that may be the best fit for you all throughout NC,"
+    print(Hello, survey,nc)
+titleLines()
+
 name1 = print(input("What is your name? "))
 #The first questions we are asking is the name of the participant.
 totalpoints = 0
