@@ -116,13 +116,13 @@ else:
         
 #This section uses a famlies salary to add points to the system
 financeProblem1 = float(input("What is your families yearly salary?:"))                     
-if financeProblem1>=40000:
+if financeProblem1>=70000:
     totalpoints +=5
-elif financeProblem1<40000 and mathProblem1>30000:
+elif financeProblem1 < 70000 and mathProblem1 >= 50000:
     totalpoints +=4
-elif financeProblem1<30000 and mathProblem1>20000:
+elif financeProblem1 < 50000 and mathProblem1 >= 35000:
     totalpoints +=3
-elif financaProblem1<20000 and mathProblem1>10000:
+elif financaProblem1 < 350000 and mathProblem1 >= 20000:
     totalpoints +=2
-elif financeProblem1<10000:
+elif financeProblem1 < 20000:
     totalpoints +=1
