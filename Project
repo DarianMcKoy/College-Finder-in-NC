@@ -17,10 +17,10 @@
 #If answered yes system will loop back to the beginning
 #If answered no the system will terminate 
 #THIS BELOW IS WHAT I HAVE SO FAR
-keep_Going = 'yes'
-while keep_Going == 'yes':
-    #THIS BELOW IS WHAT I HAVE SO FAR
 
+doAnother = 'yes' 
+while doAnother == 'yes': #This is to have the survey run as many times as the users would like
+ #this function is to call the introduciton lines  
     def titleLines():
         Hello = "Hello and welcome to the College Finder Survey."
         survey = "This is a survey and test meant to find the colleges and universitiies"
@@ -178,5 +178,5 @@ while keep_Going == 'yes':
     elif financeProblem1 < 20000:
         totalpoints +=1
     print(totalpoints)
-    keep_Going = input("Do another?")
+    doAnother = input("Do another?")
 
