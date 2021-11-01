@@ -17,160 +17,166 @@
 #If answered yes system will loop back to the beginning
 #If answered no the system will terminate 
 #THIS BELOW IS WHAT I HAVE SO FAR
+keep_Going = 'yes'
+while keep_Going == 'yes':
+    #THIS BELOW IS WHAT I HAVE SO FAR
 
-def titleLines():
-    Hello = "Hello and welcome to the College Finder Survey."
-    survey = "This is a survey and test meant to find the colleges and universitiies"
-    nc = "that may be the best fit for you all throughout NC,"
-    print(Hello, survey,nc)
-titleLines()
+    def titleLines():
+        Hello = "Hello and welcome to the College Finder Survey."
+        survey = "This is a survey and test meant to find the colleges and universitiies"
+        nc = "that may be the best fit for you all throughout NC,"
+        print(Hello, survey,nc)
+    titleLines()
 
-name1 = print(input("What is your name? "))
+    name1 = print(input("What is your name? "))
 #The first questions we are asking is the name of the participant.
-totalpoints = 0
+    totalpoints = 0
 
 #Next we are aaking for the weighted and unweighted GPA of the participant as both of these numbers are important to the college admissions process.
 
-gpa_1 = float(input("What is your unweighted highschool GPA? (Must be a number equal to or less than 4)"))
+    gpa_1 = float(input("What is your unweighted highschool GPA? (Must be a number equal to or less than 4)"))
 
-if gpa_1 >= 3.75:
+    if gpa_1 >= 3.75:
         totalpoints += 10
-elif (gpa_1 >= 3.4) and (gpa_1 < 3.75):
-    totalpoints += 7
-elif (gpa_1 >= 3) and (gpa_1 < 3.4):
-    totalpoints += 5
-elif (gpa_1 >= 2.5) and (gpa_1 <3):
-    totalpoints += 3
-else:
-    totalpoints+= 0
+    elif (gpa_1 >= 3.4) and (gpa_1 < 3.75):
+        totalpoints += 7
+    elif (gpa_1 >= 3) and (gpa_1 < 3.4):
+        totalpoints += 5
+    elif (gpa_1 >= 2.5) and (gpa_1 <3):
+        totalpoints += 3
+    else:
+        totalpoints+= 0
 
-gpa_2 = float(input("What is your weighted highschool GPA wIth AP Courses +1 and Honors Courses +.5? (Must be equal to or greater than your unweighted GPA"))
-if gpa_2 - gpa_1 >= .7:
-              totalpoints += 5
-elif (gpa_2 - gpa_1 >= .5) and (gpa_2 - gpa_1 < .7):
-              totalpoints += 4
-elif (gpa_2 - gpa_1 >= .3) and (gpa_2 - gpa_1 < .5):
-              totalpoints += 3
-elif (gpa_2 - gpa_1 >= .1) and (gpa_2 - gpa_1 < .3):
-              totalpoints += 2
-elif (gpa_2 - gpa_1 > 0) and (gpa_2 - gpa_1 < .1):
-              totalpoints += 1
-else :
-    totalpoints += 0
+    gpa_2 = float(input("What is your weighted highschool GPA wIth AP Courses +1 and Honors Courses +.5? (Must be equal to or greater than your unweighted GPA"))
+    if gpa_2 - gpa_1 >= .7:
+        totalpoints += 5
+    elif (gpa_2 - gpa_1 >= .5) and (gpa_2 - gpa_1 < .7):
+        totalpoints += 4
+    elif (gpa_2 - gpa_1 >= .3) and (gpa_2 - gpa_1 < .5):
+        totalpoints += 3
+    elif (gpa_2 - gpa_1 >= .1) and (gpa_2 - gpa_1 < .3):
+        totalpoints += 2
+    elif (gpa_2 - gpa_1 > 0) and (gpa_2 - gpa_1 < .1):
+        totalpoints += 1
+    else :
+        totalpoints += 0
     
 #SAT and ACT scores are two testing scores that colleges take very seriously, these numebrs can make or break which schools a student can get into and are a big part of the admissions process.
-satscore1 = int(input("What is your score on the math section of the SAT? (Must be a number between 200 and 800) "))
-if (satscore1 >= 750) and (satscore1 <= 800):
+    satscore1 = int(input("What is your score on the math section of the SAT? (Must be a number between 200 and 800) "))
+    if (satscore1 >= 750) and (satscore1 <= 800):
         totalpoints += 10
-elif (satscore1 >= 700) and (satscore1 < 750):
+    elif (satscore1 >= 700) and (satscore1 < 750):
         totalpoints += 8
-elif (satscore1 >= 650) and (satscore1 < 700):
+    elif (satscore1 >= 650) and (satscore1 < 700):
         totalpoints += 7
-elif (satscore1 >= 600) and (satscore1 < 650):
+    elif (satscore1 >= 600) and (satscore1 < 650):
         totalpoints += 6
-elif (satscore1 >= 550) and (satscore1 < 600):
+    elif (satscore1 >= 550) and (satscore1 < 600):
         totalpoints += 5
-elif (satscore1 >= 500) and (satscore1 < 550):
+    elif (satscore1 >= 500) and (satscore1 < 550):
         totalpoints += 4
-elif (satscore1 >= 450) and (satscore1 < 500):
+    elif (satscore1 >= 450) and (satscore1 < 500):
         totalpoints += 3
-elif (satscore1 >= 400) and (satscore1 < 450):
+    elif (satscore1 >= 400) and (satscore1 < 450):
         totalpoints += 2
-elif (satscore1 >= 350) and (satscore1 < 400):
+    elif (satscore1 >= 350) and (satscore1 < 400):
         totalpoints += 1
-else :
+    else :
         totalpoints += 0
 
-satscore2 = int(input("What is your score on the reading section of the SAT? (Must be a number between 200 and 800) "))
-if (satscore2 >= 750) and (satscore2 <= 800):
+    satscore2 = int(input("What is your score on the reading section of the SAT? (Must be a number between 200 and 800) "))
+    if (satscore2 >= 750) and (satscore2 <= 800):
         totalpoints += 10
-elif (satscore2 >= 700) and (satscore2 < 750):
+    elif (satscore2 >= 700) and (satscore2 < 750):
         totalpoints += 8
-elif (satscore2 >= 650) and (satscore2 < 700):
+    elif (satscore2 >= 650) and (satscore2 < 700):
         totalpoints += 7
-elif (satscore2 >= 600) and (satscore2 < 650):
+    elif (satscore2 >= 600) and (satscore2 < 650):
         totalpoints += 6
-elif (satscore2 >= 550) and (satscore2 < 600):
+    elif (satscore2 >= 550) and (satscore2 < 600):
         totalpoints += 5
-elif (satscore2 >= 500) and (satscore2 < 550):
+    elif (satscore2 >= 500) and (satscore2 < 550):
         totalpoints += 4
-elif (satscore2 >= 450) and (satscore2 < 500):
+    elif (satscore2 >= 450) and (satscore2 < 500):
         totalpoints += 3
-elif (satscore2 >= 400) and (satscore2 < 450):
+    elif (satscore2 >= 400) and (satscore2 < 450):
         totalpoints += 2
-elif (satscore2 >= 350) and (satscore2 < 400):
+    elif (satscore2 >= 350) and (satscore2 < 400):
         totalpoints += 1
-else :
+    else :
         totalpoints += 0
 
-actscore = int(input("What is your ACT score? (Must be an number between 1 and 36) "))
-if (actscore >= 33) and (actscore <= 36):
+    actscore = int(input("What is your ACT score? (Must be an number between 1 and 36) "))
+    if (actscore >= 33) and (actscore <= 36):
         totalpoints += 10
-elif (actscore >= 28) and (actscore < 33):
+    elif (actscore >= 28) and (actscore < 33):
         totalpoints += 8
-elif (actscore >= 24) and (actscore < 28):
+    elif (actscore >= 24) and (actscore < 28):
         totalpoints += 6
-elif (actscore >= 21) and (actscore < 24):
+    elif (actscore >= 21) and (actscore < 24):
         totalpoints += 4
-elif (actscore >= 16) and (actscore < 21):
+    elif (actscore >= 16) and (actscore < 21):
         totalpoints += 2
-else :
+    else :
         totalpoints += 0
    
 #Extracurriculars are a great way to grab the attention of college admissions office and often are considered just as important as grades.
 
-extras = int(input("How many extracurriculars have you been involved in your entire high school career? These may include sports, clubs, student government, or any other activities you have been involved in throughout highschool(Must be a number) "))
-if extras > 5 :
+    extras = int(input("How many extracurriculars have you been involved in your entire high school career? These may include sports, clubs, student government, or any other activities you have been involved in throughout highschool(Must be a number) "))
+    if extras > 5 :
             totalpoints += 5
-else:
+    else:
         totalpoints += extras
 
 #We have placed a simple math and english problem in the survey to see the simple problem solving skills of the participant.
 
-mathproblem = int(input("If 3(2x-3) = 33, what does x equal? (Must be an integer)"))
-if mathproblem == 7:
+    mathproblem = int(input("If 3(2x-3) = 33, what does x equal? (Must be an integer)"))
+    if mathproblem == 7:
         totalpoints += 5
-else:
+    else:
         totalpoints += 0
 
-print(" (1) Her voice is clear.")
-print(" (2) Her voice was a clear bell.")
-print(" (3) Her voice was strong and sure.")
-print(" (4) Her voice rang clear like a bell.")
-readingproblem = input("Which of the following is a simile? (Answer with 1, 2, 3, or 4)")
-
-if readingproblem == 4:
+    print(" (1) Her voice is clear.")
+    print(" (2) Her voice was a clear bell.")
+    print(" (3) Her voice was strong and sure.")
+    print(" (4) Her voice rang clear like a bell.")
+    readingproblem = input("Which of the following is a simile? (Answer with 1, 2, 3, or 4)")
+    
+    if readingproblem == 4:
         totalpoints += 5
-else:
+    else:
         totalpoints += 0
         
-mathproblem = int(input("If 3(2x-3) = 33, what does x equal? (Must be an integer)"))
-if mathproblem == 7:
+    mathproblem = int(input("If 3(2x-3) = 33, what does x equal? (Must be an integer)"))
+    if mathproblem == 7:
         totalpoints += 5
-else:
+    else:
         totalpoints += 0
 
-print(" (1) Her voice is clear.")
-print(" (2) Her voice was a clear bell.")
-print(" (3) Her voice was strong and sure.")
-print(" (4) Her voice rang clear like a bell.")
-readingproblem = input("Which of the following is a simile? (Answer with 1, 2, 3, or 4)")
+    print(" (1) Her voice is clear.")
+    print(" (2) Her voice was a clear bell.")
+    print(" (3) Her voice was strong and sure.")
+    print(" (4) Her voice rang clear like a bell.")
+    readingproblem = input("Which of the following is a simile? (Answer with 1, 2, 3, or 4)")
 
-if readingproblem == 4:
+    if readingproblem == 4:
         totalpoints += 5
-else:
+    else:
         totalpoints += 0
         
 #This section uses a famlies salary to add points to the system
 
-financeProblem1 = float(input("What is your families yearly salary?:"))                     
-if financeProblem1>=70000:
-    totalpoints +=5
-elif financeProblem1 < 70000 and mathProblem1 >= 50000:
-    totalpoints +=4
-elif financeProblem1 < 50000 and mathProblem1 >= 35000:
-    totalpoints +=3
-elif financaProblem1 < 350000 and mathProblem1 >= 20000:
-    totalpoints +=2
-elif financeProblem1 < 20000:
-    totalpoints +=1
+    financeProblem1 = float(input("What is your families yearly salary?:"))                     
+    if financeProblem1>=70000:
+        totalpoints +=5
+    elif financeProblem1 < 70000 and financeProblem1 >= 50000:
+        totalpoints +=4
+    elif financeProblem1 < 50000 and financeProblem1 >= 35000:
+        totalpoints +=3
+    elif financeProblem1 < 350000 and financeProblem1 >= 20000:
+        totalpoints +=2
+    elif financeProblem1 < 20000:
+        totalpoints +=1
+    print(totalpoints)
+    keep_Going = input("Do another?")
+
