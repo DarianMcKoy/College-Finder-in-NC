@@ -34,7 +34,7 @@ while doAnother == 'yes': #This is to have the survey run as many times as the u
 
 #Next we are aaking for the weighted and unweighted GPA of the participant as both of these numbers are important to the college admissions process.
 
-    gpa_1 = float(input("What is your unweighted highschool GPA? (Must be a number equal to or less than 4)"))
+    gpa_1 = float(input("What is your unweighted highschool GPA? (Must be a number equal to or less than 4) "))
 
     if gpa_1 >= 3.75:
         totalpoints += 10
@@ -47,7 +47,7 @@ while doAnother == 'yes': #This is to have the survey run as many times as the u
     else:
         totalpoints+= 0
 
-    gpa_2 = float(input("What is your weighted highschool GPA wIth AP Courses +1 and Honors Courses +.5? (Must be equal to or greater than your unweighted GPA"))
+    gpa_2 = float(input("What is your weighted highschool GPA wIth AP Courses +1 and Honors Courses +.5? (Must be equal to or greater than your unweighted GPA) "))
     if gpa_2 - gpa_1 >= .7:
         totalpoints += 5
     elif (gpa_2 - gpa_1 >= .5) and (gpa_2 - gpa_1 < .7):
@@ -130,7 +130,7 @@ while doAnother == 'yes': #This is to have the survey run as many times as the u
 
 #We have placed a simple math and english problem in the survey to see the simple problem solving skills of the participant.
 
-    mathproblem = int(input("If 3(2x-3) = 33, what does x equal? (Must be an integer)"))
+    mathproblem = int(input("If 3(2x-3) = 33, what does x equal? (Must be an integer) "))
     if mathproblem == 7:
         totalpoints += 5
     else:
@@ -140,7 +140,7 @@ while doAnother == 'yes': #This is to have the survey run as many times as the u
     print(" (2) Her voice was a clear bell.")
     print(" (3) Her voice was strong and sure.")
     print(" (4) Her voice rang clear like a bell.")
-    readingproblem = input("Which of the following is a simile? (Answer with 1, 2, 3, or 4)")
+    readingproblem = input("Which of the following is a simile? (Answer with 1, 2, 3, or 4) ")
     
     if readingproblem == 4:
         totalpoints += 5
@@ -150,7 +150,7 @@ while doAnother == 'yes': #This is to have the survey run as many times as the u
         
 #This section uses a famlies salary to add points to the system
 
-    financeProblem1 = float(input("What is your families yearly salary?:"))
+    financeProblem1 = float(input("What is your families yearly salary?: "))
     if financeProblem1>=70000:
                 totalpoints +=5
     elif financeProblem1 < 70000 and financeProblem1 >= 50000:
@@ -185,7 +185,7 @@ while doAnother == 'yes': #This is to have the survey run as many times as the u
 
     print ("Regardless of what you scored on this survey, know that there are so many colleges and universities all throughout North Carolina and the country and this survey should be used as a starting point for your college search journey!")
 
-    doAnother = input("Do another?")
+    doAnother = input("Do another? ")
 
 #The participant has the opportunity to repeat the survey as many times as they want and the survey will completely end after they finish and enter no when asked to do another.
 
