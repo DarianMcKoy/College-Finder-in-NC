@@ -146,37 +146,46 @@ while doAnother == 'yes': #This is to have the survey run as many times as the u
         totalpoints += 5
     else:
         totalpoints += 0
-        
-    mathproblem = int(input("If 3(2x-3) = 33, what does x equal? (Must be an integer)"))
-    if mathproblem == 7:
-        totalpoints += 5
-    else:
-        totalpoints += 0
 
-    print(" (1) Her voice is clear.")
-    print(" (2) Her voice was a clear bell.")
-    print(" (3) Her voice was strong and sure.")
-    print(" (4) Her voice rang clear like a bell.")
-    readingproblem = input("Which of the following is a simile? (Answer with 1, 2, 3, or 4)")
-
-    if readingproblem == 4:
-        totalpoints += 5
-    else:
-        totalpoints += 0
         
 #This section uses a famlies salary to add points to the system
 
-    financeProblem1 = float(input("What is your families yearly salary?:"))                     
+    financeProblem1 = float(input("What is your families yearly salary?:"))
     if financeProblem1>=70000:
-        totalpoints +=5
+                totalpoints +=5
     elif financeProblem1 < 70000 and financeProblem1 >= 50000:
-        totalpoints +=4
+                totalpoints +=4
     elif financeProblem1 < 50000 and financeProblem1 >= 35000:
-        totalpoints +=3
+                totalpoints +=3
     elif financeProblem1 < 350000 and financeProblem1 >= 20000:
-        totalpoints +=2
-    elif financeProblem1 < 20000:
-        totalpoints +=1
-    print(totalpoints)
+                totalpoints +=2
+    else:
+                totalpoints +=1
+
+    print ("End of Survey")
+
+#The Survey is over and now the total points that have been accumulated to decide potential four year universities thsat may be a good fit.
+#Below is where the options are sorted. Whichever range the total points falls in will decide which options will be given at the end.
+
+    if totalpoints >= 53:
+        print ("Some schools you should consider in NC are Duke, UNC Chapel Hill, NC State, and Wake Forest.")
+    elif totalpoints >= 46 and totalpoints < 53:
+        print (" Some schools you should consider are Campbell, UNC Wilmington, Elon, , UNC Charlotte, App State, High Point, and Davidson.")
+    elif totalpoints >= 40 and totalpoints < 46:
+        print ("Some schools you should consider are NC A&T, Gardner Webb, UNC Greensboro, and UNC Asheville")
+    elif totalpoints >= 35 and totalpoints <40:
+        print ("Some schools you should consider are Queens University, Winston Salem State, to ECU, and Barton College")
+    else:
+        print ("Based off your inputs in the survey, you have a lot of things to work on to find a university in North Carolina that is a good fit for you. Improving SAT and ACT scores along with boosting your GPA, taking AP and honors course, and adding extra curriculars are key. Also community colleges may be a great fit for you also.")
+
+    print ("Here is a list of all of your inputs and asnwers from the survey")
+    x = [gpa_1, gpa_2, satscore1, satscore2, actscore, extras, mathproblem, readingproblem, financeProblem1]
+    for i in x:
+            print(i)
+
+    print ("Regardless of what you scored on this survey, know that there are so many colleges and universities all throughout North Carolina and the country and this survey should be used as a starting point for your college search journey!")
+
     doAnother = input("Do another?")
+
+#The participant has the opportunity to repeat the survey as many times as they want and the survey will completely end after they finish and enter no when asked to do another.
 
