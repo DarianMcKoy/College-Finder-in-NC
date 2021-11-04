@@ -178,7 +178,9 @@ while doAnother == 'yes': #This is to have the survey run as many times as the u
     else:
         print ("Based off your inputs in the survey, you have a lot of things to work on to find a university in North Carolina that is a good fit for you. Improving SAT and ACT scores along with boosting your GPA, taking AP and honors course, and adding extra curriculars are key. Also community colleges may be a great fit for you also.")
 
-    print ("Here is a list of all of your inputs and asnwers from the survey")
+    TOTAL_POSSIBLE = 60
+    
+    print ("Here is a list of all of your inputs and asnwers from the survey. You received", 100 *(totalpoints / TOTAL_POSSIBLE))
     x = [gpa_1, gpa_2, satscore1, satscore2, actscore, extras, mathproblem, readingproblem, financeProblem1]
     for i in x:
             print(i)
