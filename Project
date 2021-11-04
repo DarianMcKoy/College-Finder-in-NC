@@ -188,4 +188,4 @@ while doAnother == 'yes': #This is to have the survey run as many times as the u
     doAnother = input("Do another? ")
 
 #The participant has the opportunity to repeat the survey as many times as they want and the survey will completely end after they finish and enter no when asked to do another.
-
+# Sources: Dr. Munoz ITS 250 powerpoints and Dr. Munoz Github - https://github.com/DrGMC/Python-ITS-250
