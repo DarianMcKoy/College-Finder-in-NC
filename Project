@@ -130,7 +130,7 @@ while doAnother == 'yes': #This is to have the survey run as many times as the u
 
 #We have placed a simple math and english problem in the survey to see the simple problem solving skills of the participant.
 
-    mathproblem = int(input("If 3(2x-3) = 33, what does x equal? (Must be an integer) "))
+    mathproblem = float(input("If 3(2x-3) = 33, what does x equal? (Must be an integer) "))
     if mathproblem == 7:
         totalpoints += 5
     else:
